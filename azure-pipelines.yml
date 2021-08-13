@@ -1,3 +1,11 @@
+schedules:
+- cron: "*/5 * * * *"
+  displayName: '5 min'
+  branches:
+    include:
+    - master
+    - release
+  always: true
 pool:
   vmImage: 'ubuntu-latest'
 steps:
