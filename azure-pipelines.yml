@@ -1,0 +1,13 @@
+schedules:
+- cron: "*/2 * * * *"
+  displayName: '5 min'
+  branches:
+    include:
+    - master
+    - mr_test
+  always: true
+pool:
+  vmImage: 'ubuntu-latest'
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
