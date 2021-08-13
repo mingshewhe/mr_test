@@ -4,7 +4,6 @@ schedules:
   branches:
     include:
     - master
-    - release
   always: true
 pool:
   vmImage: 'ubuntu-latest'
