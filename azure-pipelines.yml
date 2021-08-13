@@ -5,10 +5,11 @@
 
 schedules:
 - cron: "5 * * * *"
-  displayName: Daily midnight build
+  displayName: Weekly Sunday build
   branches:
     include:
     - master
+    - mr_test
   always: true
 
 pool:
