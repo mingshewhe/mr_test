@@ -1,6 +1,6 @@
 schedules:
 - cron: "6 * * * *"
-  displayName: 5 min
+  displayName: '5 min'
   branches:
     include:
     - master
