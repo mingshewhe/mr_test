@@ -9,6 +9,7 @@ schedules:
   branches:
     include:
     - master
+    - mr_test
   always: true
 
 pool:
