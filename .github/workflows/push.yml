@@ -25,19 +25,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
-          ref: 3d7c79e59fa30274d8c3ff9a374bb5bbc52a8f81
           clean:  true
           lfs:  true
           submodules:  true
 
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: push code
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          exit 1
+          echo "hello world" > hello.txt
+          git add .
+          git commit -m "add hello.txt"
+          git push
