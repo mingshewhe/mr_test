@@ -31,6 +31,8 @@ jobs:
 
       - name: push code
         run: |
+          git config  user.email "xiaoming_he@outlook.com"
+          git config  user.name "mingshewhe"
           echo "hello world" > hello.txt
           git add .
           git commit -m "add hello.txt"
