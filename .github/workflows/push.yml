@@ -2,6 +2,8 @@
 
 name: CI
 
+
+
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -12,7 +14,8 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+env:
+  aaa: '{"aaa":"1111"}'
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -31,11 +34,4 @@ jobs:
 
       - name: push code
         run: |
-          echo ${{ secrets.aaa }}
-          echo ${{ secrets.GITHUB_TOKEN }}
-          git config  user.email "xiaoming_he@outlook.com"
-          git config  user.name "mingshewhe"
-          echo "hello world" > hello.txt
-          git add .
-          git commit -m "add hello.txt"
-          git push
+          echo "${{ fromJSON(env.aaa).aaa }}"
